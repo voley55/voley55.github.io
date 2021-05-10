@@ -18,6 +18,16 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
+lsi: false
+safe: true
+incremental: false
+highlighter: rouge
+gist:
+  noscript: false
+kramdown:
+  math_engine: mathjax
+  syntax_highlighter: rouge
+ 
 title: "Voley Ryts - An honest attempt at sharing technical learnings"
 email: alish1692@gmail.com
 description: >-
@@ -31,8 +41,10 @@ subscribe: false
 
 # Build settings
 theme: "jekyll-theme-hamilton"
+remote_theme: "ngzhio/jekyll-theme-hamilton"
 plugins:
   - jekyll-theme-hamilton
+  - jekyll-remote-theme
 
 # Exclude from processing.
 # The following items will not be processed, by default.

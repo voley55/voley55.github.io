@@ -11,6 +11,7 @@ source "https://rubygems.org"
 
 # jekyll hamiltion theme
 gem 'jekyll-theme-hamilton'
+gem 'jekyll-remote-theme'
 
 # install webrick
 gem 'webrick'

@@ -15,7 +15,7 @@ built-in extensions for semi-structured and schema-less data.
 Snowflake is a service-oriented architecture composed of highly fault tolerant and independently scalable services.
 These services communicate through RESTful interfaces and fall into three architectural layers:  
 
-1. **Data Storage**   
+1. **Data Storage** 
 2. **Virtual Warehouses**
 3. **Cloud Services**
 
