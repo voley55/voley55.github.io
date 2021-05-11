@@ -78,9 +78,9 @@ Snowflake is a service-oriented architecture composed of highly fault tolerant a
 * **Time Travel and Cloning**
     * As mentioned above in *Pruning* section above, Snowflake implements Snapshot Isolation (SI) on top of multi-version concurrency control (MVCC) and write operations on a table produce a newer version of the table by adding and removing whole files.
     * When files are removed by a new version, they are retained for a configurational duration (up to 90 days). File retention allows Snowflake to read earlier versions of tables very efficiently; that is, to perform *time travel* on the database.
-    * One can even access different versions of the same table in a single query.
-        ``sql
-        SELECT new.key, new.value, old.value FROM my_table new JOIN my_table AT(OFFSET => -86400) old ON new.key = old.key WHERE new.value <> old.value;
+    * One can even access different versions of the same table in a single query.  
+        ```sql
+         SELECT new.key, new.value, old.value FROM my_table new JOIN my_table AT(OFFSET => -86400) old ON new.key = old.key   WHERE new.value <> old.value;
         ```
     * Snowflake also implements a functionality called *cloning*, expressed through the new keyword **CLONE**. Cloning a table creates a new table with the same definition and contents quickly and without making physical copies of table files. The clone operation simply copies the metadata of the source table. Right after cloning, both tables refer to the same set of files, but both tables can be modified independently thereafter.
 
